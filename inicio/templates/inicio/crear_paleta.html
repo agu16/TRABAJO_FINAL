@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title_head %} 
+    <title> Crear paleta </title> 
+    {% endblock title_head  %}
+    
+{% block  h1_header %} 
+ <h1>Creando paleta</h1>  
+{% endblock h1_header  %}
+
+
+
+{% block content %} 
+
+ <form action={% url 'inicio:crear_paleta' %} method="post">
+   {% csrf_token %}
+   {{form}}
+   <button>Crear</button>
+   </form>
+
+{% endblock  %}
